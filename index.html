@@ -19,12 +19,14 @@
 <body>
     
     <div id="app">
-        <button @click="getData">Carica dati</button>
-        <ul>
-            <li v-for="mail in myemail">
-                {{mail}}
-            </li>
-        </ul>
+        <div class="container">
+            <button @click="getData">Carica dati</button>
+            <ul v-if="myemail.length === 10">
+                <li v-for="mail in myemail">
+                    {{mail}}
+                </li>
+            </ul>
+        </div>
     </div>
 
 
